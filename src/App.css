@@ -1,38 +1,89 @@
-.App {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(248, 243, 238);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
   text-align: center;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.select__wrapper {
+  max-width: 500px;
+  margin: 50px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background: none;
+  border: none;
+  padding: 3px 6px;
+  border: 1px solid turquoise;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.option__wrapper {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.option__wrapper-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: rebeccapurple;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.multivalue__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.queried,
+.confirmed {
+  font-size: 10px;
+  color: white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1px 2px;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.queried {
+  background-color: orangered;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.confirmed {
+  background-color: green;
 }
